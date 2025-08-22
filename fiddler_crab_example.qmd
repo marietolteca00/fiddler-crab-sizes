@@ -16,7 +16,6 @@ library(tidyverse)
 ```{r}
 pie_crab
 skimr::skim(pie_crab)
-summary(pie_crab)
 ```
 
 # SHORT AWESOME INTRODUCTION TO FIDDLER CRAB CARAPACE
@@ -31,6 +30,14 @@ ggplot(data = pie_crab, aes(x = size, y = latitude)) +
 
 # oops this is my branch now...
   
+```
+
+```{r}
+#summary(pie_crab)
+
+pie_crab %>% 
+  group_by(site) %>% 
+  summarize(size = round(mean(size),2), sd= sd(size, na.rm=TRUE), sample_size=n())
 ```
 
 
