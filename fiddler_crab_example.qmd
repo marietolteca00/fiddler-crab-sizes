@@ -1,0 +1,25 @@
+---
+title: "lterdatasampler"
+format: html
+editor: visual
+---
+
+## 
+```{r}
+library(lterdatasampler)
+library(tidyverse)
+```
+
+
+```{r}
+pie_crab
+skimr::skim(pie_crab)
+summary(pie_crab)
+```
+
+
+```{r}
+ggplot(data = pie_crab, aes(y = latitude, x = water_temp)) +
+  geom_point()
+```
+
