@@ -2,6 +2,8 @@
 title: "lterdatasampler"
 format: html
 editor: visual
+execute: 
+  echo: false
 ---
 
 ## 
@@ -17,9 +19,19 @@ skimr::skim(pie_crab)
 summary(pie_crab)
 ```
 
+# SHORT AWESOME INTRODUCTION TO FIDDLER CRAB CARAPACE
+- there are different types of crabs..... they live in salt marshes on the eastern coast of the United States (US). They have expanded there space due to ocean warming... the data looks at fiddler crab distribution along Florida and Massachusetts coast. 13 marches were sampled across 12 degrees of latitude. Between 25 and 37 adult males were collected, between July and August 16.
+
 ```{r}
+#| fig-cap: This plot shows, size distribution across all latitude the whole sampling season.
+
 ggplot(data = pie_crab, aes(x = size, y = latitude)) +
   geom_point()
+  
 
 # oops this is my branch now...
+  
 ```
+
+
+
